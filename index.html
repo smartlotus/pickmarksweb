@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pickmarks项目日志</title>
+    <style>
+        /* =========================================
+           1. 核心风格：网格纸背景与全局字体
+           ========================================= */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            /* 使用 CSS 渐变绘制网格线，模拟笔记本纸张 */
+            background-image: 
+                linear-gradient(#eaeaea 1px, transparent 1px),
+                linear-gradient(90deg, #eaeaea 1px, transparent 1px);
+            background-size: 30px 30px; /* 控制网格的大小 */
+            color: #222;
+            /* 优先使用衬线字体（如宋体），契合复古日记的视觉感受 */
+            font-family: 'Noto Serif SC', 'Songti SC', 'STSong', 'Times New Roman', serif; 
+            line-height: 2; /* 较大的行高让阅读更舒适 */
+        }
+
+        /* =========================================
+           2. 页面布局：居中的阅读区
+           ========================================= */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            /* 给容器加上微弱的半透明白色背景，让文字更易读，同时透出网格 */
+            background-color: rgba(255, 255, 255, 0.6); 
+            min-height: 100vh;
+        }
+
+        /* =========================================
+           3. 排版细节：标题、日期、正文与图片
+           ========================================= */
+        h1.site-title {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 60px;
+            font-family: 'Georgia', serif; /* 英文标题采用 Georgia 字体，还原图1效果 */
+        }
+
+        /* 每一篇日志的容器 */
+        .log-entry {
+            margin-bottom: 80px;
+        }
+
+        .log-date {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: left;
+            border-left: 3px solid #333;
+            padding-left: 10px;
+        }
+
+        /* 正文段落，还原图2的首行缩进 */
+        .log-content p {
+            text-indent: 2em; /* 首行缩进两个字符 */
+            margin-bottom: 15px;
+            text-align: justify; /* 两端对齐，使排版更规整 */
+        }
+
+        /* 图片自适应处理 */
+        .log-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto; /* 图片上下留白并居中 */
+            /* 给图片加一个极淡的边框，使其更好地融入网格背景 */
+            border: 1px solid #ddd; 
+            padding: 4px;
+            background: #fff;
+        }
+
+        /* =========================================
+           4. 交互元素：底部圆形按钮
+           ========================================= */
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px dashed #ccc; /* 顶部虚线分隔 */
+        }
+
+        .nav-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%; /* 变成圆形 */
+            border: 1px solid #333;
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            transition: background 0.2s;
+        }
+
+        .nav-btn:hover {
+            background: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="site-title">pickmarks项目日志</h1>
+
+    <article class="log-entry">
+        <div class="log-date">2026.3.21 晨</div>
+        <div class="log-content">
+            <p>——————3245352353</p>
+            <p>23542352345————</p>
+            
+            <img src="01.jpg"项目配图">
+            
+            
+        </div>
+    </article>
+
+    <article class="log-entry">
+        <div class="log-date">2026.3.20 夜</div>
+        <div class="log-content">
+            <p>做了一个浏览器书签整理工具因为自己chrome里面的书签实在是太多了……</p>
+            <img src="01.jpg" alt="草图">
+            
+           
+
+
+
+        </div>
+    </article>
+
+    <div class="nav-buttons">
+        <button class="nav-btn">←</button>
+        <button class="nav-btn">→</button>
+    </div>
+</div>
+
+</body>
+</html>
